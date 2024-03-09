@@ -40,35 +40,3 @@ def crossover(parent1, parent2):
     child2[:] = [parent2[0] - dw1*alpha, parent2[1] - dw2*alpha]
     return child1, child2
 
-
-# if __name__ == '__main__':
-#     # X, Y = np.meshgrid(np.arange(-5, 5, 0.05), np.arange(-5, 5, 0.05))
-#     # Z = fitness_measure(X, Y)
-#     # visualize_fitness_measure(X, Y, Z)
-#     #
-#     # # setting up initial population
-#     # population = initialize_population(POPULATION_SIZE)
-#     # x_coords = [item[0] for item in population]
-#     # y_coords = [item[1] for item in population]
-#     # visualize_population(X, Y, Z, x_coords, y_coords)
-#
-#     for i in range(N_GENERATIONS):
-#         new_population = []
-#         fit = evaluate_fitness(population)
-#         for j in range(int(len(population)/2)):
-#             # selecting parents
-#             parent1, parent2 = selection(population, fit)
-#             # crossover
-#             child1, child2 = crossover(parent1, parent2)
-#             new_population.append(child1)
-#             new_population.append(child2)
-#         population = new_population
-#         visualize_population(X, Y, Z, x_coords, y_coords)
-#         # mutation
-#         mutated_idx = random.randint(0, int(len(population) - 1))
-#         mutated_subject = (population[mutated_idx][0] + random.random(), population[mutated_idx][1] + random.random())
-#         population[mutated_idx][:] = mutated_subject
-#
-#         x_coords = [item[0] for item in population]
-#         y_coords = [item[1] for item in population]
-#         visualize_population(X, Y, Z, x_coords, y_coords)
