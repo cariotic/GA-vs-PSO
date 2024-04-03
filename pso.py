@@ -6,6 +6,9 @@ C2 = 0.1
 ALPHA = 0.5
 
 
+def initialize_population_pso(population_size):
+    return np.random.rand(2, population_size) * 10 - 5
+
 def initialize_population_velocity(population_size):
     return np.random.randn(2, population_size) * 0.1
 

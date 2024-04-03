@@ -3,6 +3,15 @@ from fitness_measure import *
 from visualization import *
 
 
+def initialize_population_ga(population_size):
+    population = []
+    for i in range(population_size):
+        x = random.uniform(-5, 5)
+        y = random.uniform(-5, 5)
+        population.append((x, y))
+    return population
+
+
 def fitness_measure2(fitness_scores):
     p = 0.1
     wmax = max(fitness_scores)
